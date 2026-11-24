@@ -90,8 +90,16 @@ h1,h2,h3{font-family:var(--fonte-tit);line-height:1.15;letter-spacing:-.01em}
 
 /* Faixa */
 .faixa{background:var(--verm);color:#fff;padding:18px 0}
-.faixa-in{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 22px;font-family:var(--fonte-tit);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.04em}
-.faixa i{font-style:normal;opacity:.6}
+.faixa-in{list-style:none;display:flex;justify-content:center;align-items:center;font-family:var(--fonte-tit);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.04em}
+.faixa-in li{display:flex;align-items:center;white-space:nowrap}
+.faixa-in li+li::before{content:"";width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.6);margin:0 26px}
+
+/* Botão Avalie no Google */
+.btn-google{display:inline-flex;align-items:center;gap:12px;padding:12px 22px;border-radius:999px;background:#fff;color:var(--grafite);font-family:var(--fonte-tit);font-weight:700;font-size:15px;box-shadow:0 0 0 3px rgba(251,188,5,.35),0 8px 22px rgba(251,188,5,.25);transition:.2s}
+.btn-google:hover{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(251,188,5,.6),0 10px 26px rgba(251,188,5,.35)}
+.estrelas{color:#FBBC05;font-size:18px;letter-spacing:1px}
+.redes a.redes-google{background:#fff;color:var(--grafite);border-color:#FBBC05;font-weight:700}
+.redes a.redes-google svg{width:20px;height:20px}
 
 /* Seções */
 .secao{padding:100px 0}
@@ -271,6 +279,13 @@ h1,h2,h3{font-family:var(--fonte-tit);line-height:1.15;letter-spacing:-.01em}
   .contato-acoes .btn{width:100%;justify-content:center}
   .redes a{font-size:13.5px}
   .rodape-in,.rodape-base{flex-direction:column;align-items:flex-start}
+  .rodape{padding-bottom:110px}
+  .btn-google{width:100%;justify-content:center;margin-bottom:8px}
+  .faixa{padding:20px 0}
+  .faixa-in{display:grid;grid-template-columns:1fr 1fr;gap:14px 10px;font-size:13.5px}
+  .faixa-in li{justify-content:center}
+  .faixa-in li+li::before{display:none}
+  .faixa-in li::before{content:"✓"!important;display:inline-block!important;width:auto!important;height:auto!important;background:none!important;margin:0 8px 0 0!important;font-weight:900;opacity:.85}
   .marca-txt b{font-size:23px}
   .marca-txt small{font-size:12px}
 }
