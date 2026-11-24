@@ -202,8 +202,8 @@ h1,h2,h3{font-family:var(--fonte-tit);line-height:1.15;letter-spacing:-.01em}
 .publicos-grade div{background:#fff;border-radius:14px;padding:20px;border-left:4px solid var(--verm)}
 
 /* Avaliações */
-.avals{columns:4;column-gap:20px}
-.aval{break-inside:avoid;margin:0 0 20px;background:#fff;border:1px solid var(--linha);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 0 var(--linha)}
+.avals{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.aval{margin:0;background:#fff;border:1px solid var(--linha);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 0 var(--linha)}
 .aval-est{color:#FBBC05;font-size:18px;letter-spacing:2px}
 .aval blockquote{color:var(--texto);font-size:15px;line-height:1.6}
 .aval figcaption{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--linha)}
@@ -314,7 +314,7 @@ h1,h2,h3{font-family:var(--fonte-tit);line-height:1.15;letter-spacing:-.01em}
   .modalidades,.ultra-grade{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto}
   .mod-ultra{transform:none}
   .publicos-grade,.padrao-itens{grid-template-columns:repeat(2,1fr)}
-  .avals{columns:2}
+  .avals{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:860px){
   .hamburguer{display:flex}
@@ -353,7 +353,7 @@ h1,h2,h3{font-family:var(--fonte-tit);line-height:1.15;letter-spacing:-.01em}
   .faixa-in li::before{content:"✓"!important;display:inline-block!important;width:auto!important;height:auto!important;background:none!important;margin:0 8px 0 0!important;font-weight:900;opacity:.85}
   .padrao{padding:24px 20px}
   .padrao-itens,.publicos-grade{grid-template-columns:1fr}
-  .avals{columns:1}
+  .avals{grid-template-columns:1fr}
   .ultra{padding:36px 18px;border-radius:22px}
   .publicos .btn{width:100%;justify-content:center;white-space:normal;text-align:center}
   .marca-txt b{font-size:23px}
